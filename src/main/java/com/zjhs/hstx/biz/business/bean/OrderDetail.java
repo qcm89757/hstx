@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 
 import com.baomidou.mybatisplus.enums.FieldFill;
+import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -31,7 +32,7 @@ public class OrderDetail implements Serializable {
     /**
      * 订单详情ID
      */
-    @TableId("detail_id")
+    @TableId(value = "detail_id", type = IdType.UUID)
     private String detailId;
     /**
      * 订单ID
@@ -71,7 +72,7 @@ public class OrderDetail implements Serializable {
     /**
      * 修改时间
      */
-    @TableField("update_time")
+    @TableField(value = "update_time", fill = FieldFill.UPDATE)
     private Date updateTime;
 
 

@@ -1,17 +1,16 @@
 package com.zjhs.hstx.biz.business.bean;
 
+import com.baomidou.mybatisplus.enums.FieldFill;
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-
 /**
  * <p>
  * 
@@ -31,9 +30,9 @@ public class ProductType implements Serializable {
     private Integer tId;
     @TableField("t_name")
     private String tName;
-    @TableField("create_time")
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
     private Date createTime;
-    @TableField("update_time")
+    @TableField(value = "update_time", fill = FieldFill.UPDATE)
     private Date updateTime;
 
 
