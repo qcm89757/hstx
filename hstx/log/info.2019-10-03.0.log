@@ -1,0 +1,64 @@
+2019-10-03 12:30:44.816  [main] INFO  com.zjhs.hstx.HstxApplication - Starting HstxApplication on LAPTOP-CUIISHM9 with PID 20140 (F:\new-hstx\hstx\target\classes started by asus in F:\new-hstx\hstx)
+2019-10-03 12:30:44.820  [main] INFO  com.zjhs.hstx.HstxApplication - The following profiles are active: dev
+2019-10-03 12:30:46.028  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$161d1f3c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-03 12:30:46.276  [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-10-03 12:30:46.291  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-10-03 12:30:46.298  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-03 12:30:46.298  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-03 12:30:46.404  [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-03 12:30:46.404  [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1541 ms
+2019-10-03 12:30:46.516  [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-10-03 12:30:46.614  [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-03 12:33:34.310  [main] INFO  com.zjhs.hstx.HstxApplication - Starting HstxApplication on LAPTOP-CUIISHM9 with PID 1424 (F:\new-hstx\hstx\target\classes started by asus in F:\new-hstx\hstx)
+2019-10-03 12:33:34.313  [main] INFO  com.zjhs.hstx.HstxApplication - The following profiles are active: dev
+2019-10-03 12:33:35.435  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6525d852] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-03 12:33:35.666  [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-10-03 12:33:35.679  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-10-03 12:33:35.687  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-03 12:33:35.687  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-03 12:33:35.798  [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-03 12:33:35.798  [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1443 ms
+2019-10-03 12:33:36.002  [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-10-03 12:33:38.363  [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-03 12:33:38.626  [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-10-03 12:33:38.642  [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-10-03 12:33:38.655  [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-10-03 12:33:38.780  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2019-10-03 12:33:38.782  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_1
+2019-10-03 12:33:38.784  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_1
+2019-10-03 12:33:38.785  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2019-10-03 12:33:38.788  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_1
+2019-10-03 12:33:38.791  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2019-10-03 12:33:38.794  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2019-10-03 12:33:38.797  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_2
+2019-10-03 12:33:38.798  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_2
+2019-10-03 12:33:38.800  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_2
+2019-10-03 12:33:38.801  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_2
+2019-10-03 12:33:38.802  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2019-10-03 12:33:38.804  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_3
+2019-10-03 12:33:38.805  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_3
+2019-10-03 12:33:38.807  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_3
+2019-10-03 12:33:38.809  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_3
+2019-10-03 12:33:38.810  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_3
+2019-10-03 12:33:38.812  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2019-10-03 12:33:38.814  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_4
+2019-10-03 12:33:38.816  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_4
+2019-10-03 12:33:38.817  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_4
+2019-10-03 12:33:38.819  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_4
+2019-10-03 12:33:38.820  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_4
+2019-10-03 12:33:38.822  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2019-10-03 12:33:38.824  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_5
+2019-10-03 12:33:38.826  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_5
+2019-10-03 12:33:38.827  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_5
+2019-10-03 12:33:38.829  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_5
+2019-10-03 12:33:38.831  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_5
+2019-10-03 12:33:38.832  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_5
+2019-10-03 12:33:38.854  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-10-03 12:33:38.878  [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-03 12:33:38.881  [main] INFO  com.zjhs.hstx.HstxApplication - Started HstxApplication in 5.196 seconds (JVM running for 6.095)
+2019-10-03 12:33:38.883  [main] INFO  com.zjhs.hstx.boot.AppStartupBoot - ==========================================================================
+2019-10-03 12:33:38.883  [main] INFO  com.zjhs.hstx.boot.AppStartupBoot - 惠商天下后端接口 -请访问：http://localhost:8081/swagger-ui.html
+2019-10-03 12:33:38.883  [main] INFO  com.zjhs.hstx.boot.AppStartupBoot - ==========================================================================
+2019-10-03 15:56:05.809  [Thread-13] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

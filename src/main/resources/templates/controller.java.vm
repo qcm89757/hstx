@@ -1,0 +1,82 @@
+package ${package.Controller};
+
+import com.zjhs.hstx.base.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+#if(${restControllerStyle})
+import org.springframework.web.bind.annotation.RestController;
+#else
+import org.springframework.stereotype.Controller;
+#end
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+
+
+/**
+ * <p>
+ * $!{table.comment} 前端控制器
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Api("$!{table.comment}控制器")
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+#if(${kotlin})
+class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+
+#else
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+
+    @ApiOperation("新增")
+    @PostMapping("/add")
+    public Result add() {
+        return new Result<>();
+    }
+
+    @ApiOperation("删除")
+    @GetMapping("/del")
+    public Result delete() {
+        return new Result<>();
+    }
+
+    @ApiOperation("修改")
+    @PostMapping("/update")
+    public Result update() {
+        return new Result<>();
+    }
+
+    @ApiOperation("详情")
+    @GetMapping("/details")
+    public Result get() {
+        return new Result<>();
+    }
+
+    @ApiOperation("列表")
+    @GetMapping("/list")
+    public Result getList() {
+        return new Result<>();
+    }
+
+    @ApiOperation("分页列表")
+    @PostMapping("/paged")
+    public Result getPagedList() {
+        return new Result<>();
+    }
+}
+
+#end

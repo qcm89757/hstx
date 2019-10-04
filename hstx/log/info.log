@@ -1,0 +1,47 @@
+2019-10-04 08:32:24.459  [main] INFO  com.zjhs.hstx.HstxApplication - Starting HstxApplication on LAPTOP-CUIISHM9 with PID 9872 (F:\new-hstx\hstx\target\classes started by asus in F:\new-hstx\hstx)
+2019-10-04 08:32:24.465  [main] INFO  com.zjhs.hstx.HstxApplication - The following profiles are active: dev
+2019-10-04 08:32:25.737  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9fbe819d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 08:32:26.006  [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-10-04 08:32:26.021  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-10-04 08:32:26.029  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-04 08:32:26.029  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 08:32:26.135  [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-04 08:32:26.135  [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1619 ms
+2019-10-04 08:32:26.310  [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-10-04 08:32:28.177  [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-10-04 08:32:28.185  [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-04 08:34:13.680  [main] INFO  com.zjhs.hstx.HstxApplication - Starting HstxApplication on LAPTOP-CUIISHM9 with PID 14532 (F:\new-hstx\hstx\target\classes started by asus in F:\new-hstx\hstx)
+2019-10-04 08:34:13.684  [main] INFO  com.zjhs.hstx.HstxApplication - The following profiles are active: dev
+2019-10-04 08:34:14.729  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$254038b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 08:34:14.940  [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-10-04 08:34:14.953  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-10-04 08:34:14.963  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-04 08:34:14.963  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 08:34:15.069  [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-04 08:34:15.069  [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1339 ms
+2019-10-04 08:34:15.242  [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-10-04 08:34:17.501  [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 08:34:17.790  [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-10-04 08:34:17.805  [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-10-04 08:34:17.818  [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-10-04 08:34:17.938  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2019-10-04 08:34:17.939  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_1
+2019-10-04 08:34:17.940  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_1
+2019-10-04 08:34:17.942  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2019-10-04 08:34:17.943  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_1
+2019-10-04 08:34:17.944  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2019-10-04 08:34:18.008  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2019-10-04 08:34:18.009  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_2
+2019-10-04 08:34:18.010  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getUsingGET_2
+2019-10-04 08:34:18.012  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_2
+2019-10-04 08:34:18.014  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPagedListUsingPOST_2
+2019-10-04 08:34:18.015  [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2019-10-04 08:34:18.032  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-10-04 08:34:18.053  [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-04 08:34:18.056  [main] INFO  com.zjhs.hstx.HstxApplication - Started HstxApplication in 4.902 seconds (JVM running for 5.783)
+2019-10-04 08:34:18.059  [main] INFO  com.zjhs.hstx.boot.AppStartupBoot - ==========================================================================
+2019-10-04 08:34:18.059  [main] INFO  com.zjhs.hstx.boot.AppStartupBoot - 惠商天下后端接口 -请访问：http://localhost:8081/swagger-ui.html
+2019-10-04 08:34:18.059  [main] INFO  com.zjhs.hstx.boot.AppStartupBoot - ==========================================================================
+2019-10-04 08:34:38.167  [Thread-12] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

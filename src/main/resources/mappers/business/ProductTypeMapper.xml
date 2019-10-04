@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjhs.hstx.biz.business.dao.ProductTypeMapper">
+    <resultMap id="BaseTypeMap" type="com.zjhs.hstx.biz.business.bean.ProductType" >
+        <id column="t_id" property="t_id" jdbcType="INTEGER" />
+        <result column="t_name" property="t_name" jdbcType="VARCHAR" />
+        <result column="create_time" property="create_Time" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="update_Time" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <resultMap id="BaseResultMap" type="com.zjhs.hstx.biz.business.bean.ProductInfo" >
+        <id column="p_id" property="pId" jdbcType="INTEGER" />
+        <result column="t_id" property="tId" jdbcType="INTEGER" />
+        <result column="p_num" property="pNum" jdbcType="INTEGER" />
+        <result column="p_img" property="pImg" jdbcType="VARCHAR" />
+        <result column="p_name" property="pName" jdbcType="VARCHAR" />
+        <result column="p_money" property="pMoney" jdbcType="NUMERIC" />
+        <result column="p_depict" property="pDepict" jdbcType="VARCHAR" />
+        <result column="put_away" property="putAway" jdbcType="INTEGER" />
+        <result column="p_weight" property="pWeight" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Type_List" >
+	    t_id, t_name,create_time, update_time
+	 </sql>
+    <insert id="InsertType" parameterType="java.lang.String">
+		insert into product_type(t_name,create_time) VALUES(#{t_Name,jdbcType=VARCHAR},now());
+	</insert>
+    <update id="updateType" parameterType="com.zjhs.hstx.biz.business.bean.ProductType">
+		UPDATE product_type SET t_name=#{t_name,jdbcType=VARCHAR} where t_id=#{t_id,jdbcType=INTEGER};
+	</update>
+
+    <select id="getAllCrate" resultMap="BaseTypeMap">
+        select
+        <include refid="Base_Type_List" />
+        from product_type;
+    </select>
+    <!-- 查询该类型下的所有商品 -->
+    <select id="getInfoByCrateId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from product_info WHERE t_id=#{tId,jdbcType=INTEGER};
+	</select>
+    <!-- 删除商品类型 -->
+    <delete id="removeType" parameterType="java.lang.Integer">
+		delete from product_type where t_id=#{tId,jdbcType=INTEGER};
+	</delete>
+</mapper>
