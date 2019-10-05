@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zjhs.hstx.biz.business.dao.UserInfoMapper">
-    <select id="getAllUser" resultType="com.zjhs.hstx.biz.business.bean.UserInfo">
-		select * from user_info;
-	</select>
-    <!-- 根据用户名查询用户信息 -->
-    <select id="selectUserByName" resultType="com.zjhs.hstx.biz.business.bean.UserInfo">
-		select * from user_info where USER_NAME=#{USERNAME};
-	</select>
+<!--    <select id="getAllUser" resultType="com.zjhs.hstx.biz.business.bean.UserInfo">-->
+<!--		select * from user_info;-->
+<!--	</select>-->
+<!--    &lt;!&ndash; 根据用户名查询用户信息 &ndash;&gt;-->
+<!--    <select id="selectUserByName" resultType="com.zjhs.hstx.biz.business.bean.UserInfo">-->
+<!--		select * from user_info where USER_NAME=#{USERNAME};-->
+<!--	</select>-->
 
 
-    <insert id="addUser">
-		insert into
-		user(name,age,cup_size)VALUES(
-			#{name},#{age},#{cup_size}
-		);
-	</insert>
+<!--    <insert id="addUser">-->
+<!--		insert into-->
+<!--		user(name,age,cup_size)VALUES(-->
+<!--			#{name},#{age},#{cup_size}-->
+<!--		);-->
+<!--	</insert>-->
 
-    <insert id="addPhoneCode" parameterType="com.zjhs.hstx.biz.business.bean.PhoneCode">
-		insert into Phone_code(userPhone,code)VALUES(#{userPhone},#{code});
-	</insert>
-    <update id="updateCode" parameterType="com.zjhs.hstx.biz.business.bean.PhoneCode">
-		update Phone_code set code=#{code} where userPhone = #{userPhone};
-	</update>
-    <select id="getCode" parameterType="java.lang.String" resultType="com.zjhs.hstx.biz.business.bean.PhoneCode">
-		select * from Phone_code where userPhone=#{userPhone};
-	</select>
+<!--    <insert id="addPhoneCode" parameterType="com.zjhs.hstx.biz.business.bean.PhoneCode">-->
+<!--		insert into Phone_code(userPhone,code)VALUES(#{userPhone},#{code});-->
+<!--	</insert>-->
+<!--    <update id="updateCode" parameterType="com.zjhs.hstx.biz.business.bean.PhoneCode">-->
+<!--		update Phone_code set code=#{code} where userPhone = #{userPhone};-->
+<!--	</update>-->
+<!--    <select id="getCode" parameterType="java.lang.String" resultType="com.zjhs.hstx.biz.business.bean.PhoneCode">-->
+<!--		select * from Phone_code where userPhone=#{userPhone};-->
+<!--	</select>-->
 </mapper>

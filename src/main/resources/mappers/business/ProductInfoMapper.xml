@@ -1,107 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zjhs.hstx.biz.business.dao.ProductInfoMapper">
-    <resultMap id="BaseResultMap" type="com.zjhs.hstx.biz.business.bean.ProductInfo" >
-        <id column="p_id" property="pId" jdbcType="INTEGER" />
-        <result column="t_id" property="tId" jdbcType="INTEGER" />
-        <result column="p_img" property="pImg" jdbcType="VARCHAR" />
-        <result column="p_name" property="pName" jdbcType="VARCHAR" />
-        <result column="p_money" property="pMoney" jdbcType="NUMERIC" />
-        <result column="p_depict" property="pDepict" jdbcType="VARCHAR" />
-        <result column="p_num" property="pNum" jdbcType="INTEGER" />
-        <result column="put_away" property="putAway" jdbcType="BOOLEAN" />
-        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
 
-        <collection property="proType" javaType="Product_type">
-            <!-- 配置主键，是关联Order的唯一标识 -->
-            <id property="t_id" column="t_id" />
-            <result property="t_name" column="t_name" />
-        </collection>
+    <resultMap id="BaseResultMap" type="com.zjhs.hstx.biz.business.bean.ProductInfo">
+        <id column="p_id" property="pId" jdbcType="INTEGER"/>
+        <result column="t_id" property="tId" jdbcType="INTEGER"/>
+        <result column="p_img" property="pImg" jdbcType="VARCHAR"/>
+        <result column="p_name" property="pName" jdbcType="VARCHAR"/>
+        <result column="p_money" property="pMoney" jdbcType="NUMERIC"/>
+        <result column="p_depict" property="pDepict" jdbcType="VARCHAR"/>
+        <result column="p_num" property="pNum" jdbcType="INTEGER"/>
+        <result column="put_away" property="putAway" jdbcType="BOOLEAN"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
-    <sql id="Base_Column_List" >
-    p_id, t_id, p_img, p_name, p_money, p_depict,
-    p_num, put_away, create_time, update_time
-  </sql>
-    <!-- 查询所有商品 -->
+
+    <sql id="Base_Column_List">
+        p_id, t_id, p_img, p_name, p_money, p_depict,
+        p_num, put_away, create_time, update_time
+    </sql>
+
     <select id="getAllPro" resultMap="BaseResultMap">
-  	select
-  	info.p_id,info.p_img,info.p_name,type.t_name,info.p_money,info.p_depict,info.p_num,info.put_away
-  	from product_info as info LEFT join
-  	product_type as type
-  	ON
+        select
+        info.p_id,info.p_img,info.p_name,type.t_name,info.p_money,info.p_depict,info.p_num,info.put_away
+        from product_info as info LEFT join
+        product_type as type
+        ON
   	info.t_id=type.t_id;
   </select>
 
-    <!-- 模糊查询 -->
     <select id="getProByName" resultMap="BaseResultMap">
-  	SELECT * FROM product_info WHERE p_name LIKE "%"#{pName jdbcType=VARCHAR}"%";
-  </select>
+        SELECT * FROM product_info WHERE p_name LIKE "%"#{pName jdbcType=VARCHAR}"%";
+    </select>
 
-    <!-- 查询指定商品 -->
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="int" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="int">
         select
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         from product_info
         where p_id = #{pId,jdbcType=INTEGER}
     </select>
 
-    <!-- 删除商品 -->
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from product_info
-    where p_id = #{pId,jdbcType=INTEGER}
-  </delete>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from product_info
+        where p_id = #{pId,jdbcType=INTEGER}
+    </delete>
 
-
-<!--    &lt;!&ndash; 添加商品 &ndash;&gt;-->
-<!--    <insert id="insert" parameterType="com.zjhs.hstx.biz.business.bean.ProductInfo" >-->
-<!--        insert into product_info-->
-<!--        <trim prefix="(" suffix=")" suffixOverrides="," >-->
-<!--            <if test="tId != null" >-->
-<!--                t_id,-->
-<!--            </if>-->
-<!--            <if test="pImg != null" >-->
-<!--                p_img,-->
-<!--            </if>-->
-<!--            <if test="pName != null" >-->
-<!--                p_name,-->
-<!--            </if>-->
-<!--            <if test="pMoney != null" >-->
-<!--                p_money,-->
-<!--            </if>-->
-<!--            <if test="pDepict != null" >-->
-<!--                p_depict,-->
-<!--            </if>-->
-<!--            <if test="pNum != null" >-->
-<!--                p_num,-->
-<!--            </if>-->
-<!--            update_Time-->
-<!--        </trim>-->
-<!--        <trim prefix="values (" suffix=")" suffixOverrides="," >-->
-<!--            <if test="tId != null" >-->
-<!--                #{tId,jdbcType=INTEGER},-->
-<!--            </if>-->
-<!--            <if test="pImg != null" >-->
-<!--                #{pImg,jdbcType=VARCHAR},-->
-<!--            </if>-->
-<!--            <if test="pName != null" >-->
-<!--                #{pName,jdbcType=VARCHAR},-->
-<!--            </if>-->
-<!--            <if test="pMoney != null" >-->
-<!--                #{pMoney,jdbcType=DOUBLE},-->
-<!--            </if>-->
-<!--            <if test="pDepict != null" >-->
-<!--                #{pDepict,jdbcType=VARCHAR},-->
-<!--            </if>-->
-<!--            <if test="pNum != null" >-->
-<!--                #{pNum,jdbcType=INTEGER},-->
-<!--            </if>-->
-<!--            NOW()-->
-<!--        </trim>-->
-<!--    </insert>-->
-
-    <!-- 根据id修改产品信息 -->
-    <update id="updateByPrimaryKey" parameterType="com.zjhs.hstx.biz.business.bean.ProductInfo" >
+   <update id="updateByPrimaryKey" parameterType="com.zjhs.hstx.biz.business.bean.ProductInfo">
     update product_info
     set t_id = #{tId,jdbcType=INTEGER},
       p_img = #{pImg,jdbcType=LONGVARBINARY},
@@ -112,8 +56,8 @@
     where p_id = #{pId,jdbcType=INTEGER}
   </update>
 
-    <!-- 根据id修改是否上架 -->
-    <update id="updatePutAwayByPid" parameterType="java.lang.Integer" >
+  <update id="updatePutAwayByPid" parameterType="java.lang.Integer">
     update product_info SET put_away=#{arg1,jdbcType=INTEGER} where p_id=#{arg0,jdbcType=INTEGER};
   </update>
+
 </mapper>

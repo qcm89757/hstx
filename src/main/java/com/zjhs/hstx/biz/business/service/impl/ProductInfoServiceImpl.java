@@ -20,6 +20,7 @@ import java.util.List;
 @Service
 public class ProductInfoServiceImpl extends ServiceImpl<ProductInfoMapper, ProductInfo> implements IProductInfoService {
 
+
     private final ProductInfoMapper productInfoMapper;
 
     @Autowired

@@ -176,7 +176,7 @@ public class ProductInfoController {
         if(allPro.isEmpty()) {
             return Result.fail("404","没有商品");
         }else {
-            return Result.success("查询成功！");
+            return Result.success(allPro);
         }
     }
 

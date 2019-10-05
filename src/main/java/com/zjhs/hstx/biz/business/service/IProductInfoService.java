@@ -17,7 +17,6 @@ public interface IProductInfoService extends IService<ProductInfo> {
 
     /**
      *	 通过id查询商品信息
-     * @param pId
      * @return ProductInfo
      */
     ProductInfo getInfoByPid(Integer pId);
